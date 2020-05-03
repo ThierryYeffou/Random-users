@@ -63,10 +63,10 @@ $("[name='gender']").change(event => {
 $('.multiselect').change(event => {
 	const filter = event.target.value;
     $("tbody").empty();
-    if($("#tata").is(':checked')){
-        allUsers.filter(user => user.dob.age <= 40).map(user => createTable(user))
+    if($("#agemoins").is(':checked')){
+        allUsers.filter(user => user.dob.age < 40).map(user => createTable(user))
     }
-    else if($("#titi").is(':checked')){
+    else if($("#ageplus").is(':checked')){
         allUsers.filter(user => user.dob.age >= 40).map(user => createTable(user))
     }
     else {
@@ -100,7 +100,7 @@ $("[type='submit']").click((event) => {
     const genre = $("#genre").val()
     const img = $("[name='filename']").val()
    // alert(prenom, nom, ville, pays, age, genre, img)
-    nom === "" || prenom === "" || ville === "" || pays === ""  ? alert("les champs sont obligatoires") : $("p").append(`
+    nom === "" || prenom === "" || ville === "" && pays === ""  ? alert("les champs sont obligatoires") : $("p").append(`
         <div class="card">
             <img src="${img}" height=100 width=160 >
             <div class="container">

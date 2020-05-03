@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User</title>
+    <script src="jquery.js" async defer></script>
+    <script src="script.js" async defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1 style="color:blue;">Crééz votre profil</h1>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+        <label for="ville">Ville:</label><br>
+        <input type="text" id="ville" name="ville" placeholder="Ville"><br>
+        <label for="pays">Pays:</label><br>
+        <input type="text" id="pays" name="pays" placeholder="Pays"><br><br>
+        <label for="age">Choisir l'age:</label>
+        <select id="age">
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+        </select><br>
+        <label for="genre">Genre:</label>
+        <select id="genre">
+            <option>female</option>
+            <option>male</option>
+        </select><br>
+        <form action="">
+            <input type="file" id="myFile" name="filename">
+        </form><br>
+        <input type="submit" value="Submit">
+      </form> 
+      <div class="card">
+        <p></p>
+      </div>
+    </div>
+	<div class="ui container">
+		<div class="ui form">
+			<div class="grouped fields">
+				<label>Montrer: (ici on peut filtrer par le genre, une tranche d'age.<br>
+                     Si l'on veut un filtre plus profond utiliser le champ "filtrez plus".<br>
+                      Pour avoir d'autres profils rafraichir avec le bouton "refresh" ci-dessus.<br>
+                       Créé votre propre profil ci-dessus)</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input type="radio" name="gender" checked="checked" value="all" id="gender-all">
+						<label for="gender-all">Tous</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input type="radio" name="gender" value="women" id="gender-women">
+						<label for="gender-women">Femmes</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input type="radio" name="gender" value="men" id="gender-men">
+						<label for="gender-men">Hommes</label>
+					</div>
+                </div>
+                <div class="multiselect">
+                    <label><input type="checkbox" name="option[]" value="1" id="titi" />Plus 40 ans</label>
+                    <label><input type="checkbox" name="option[]" value="2" id="tata"/>Moins 40</label>
+                </div>
+                <div class="container my-5 text-center">
+                    <button class="btn btn-danger w-100" id="mybutton">Rafraichir la page</button>
+                </div>
+                <div class="field">
+                    <label style="color:blue; font-size:20px;">Filtrez PLus</label>
+                    <input id="myInput" type="text" placeholder="Search by contry or old or name or gender or city..">
+                </div>
+                <div class="mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Genre</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Ville</th>
+                                <th scope="col">Pays</th>
+                                <th colspan = 4 border=3 height=100 width=100>Resumé Profil</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            
+                        </tbody>
+                    </table>
+                </div>
+			</div>
+		</div>
+		<div class="ui divider"></div>
+		<div class="ui four cards"></div>
+	</div>
+</body>
+</html>

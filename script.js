@@ -1,11 +1,9 @@
 console.log("Mon script à été lancé!");
 
 $("document").ready(()=> {
-    console.log("jquery est pret0")
+    console.log("jquery est pret")
 })
 let allUsers = [];
-// let filter = "all";
-// let showedUsers = [];
 $.ajax({
 	url: 'https://randomuser.me/api/?results=12',
 	dataType: 'json',
@@ -90,6 +88,7 @@ $( "#mybutton" ).click(function() {
     window.location.href = "http://127.0.0.1:5500/Randomusers/index.html";
   });
 
+//create new profil
 $("[type='submit']").click((event) => {
     event.preventDefault()
     console.log("bouton submit cliqué")
@@ -100,8 +99,8 @@ $("[type='submit']").click((event) => {
     const age = $("#age").val()
     const genre = $("#genre").val()
     const img = $("[name='filename']").val()
-    alert(prenom, nom, ville, pays, age, genre, img)
-    nom === "" && prenom ==="" ? alert("les champs sont obligatoires") : $("p").append(`
+   // alert(prenom, nom, ville, pays, age, genre, img)
+    nom === "" || prenom === "" || ville === "" || pays === ""  ? alert("les champs sont obligatoires") : $("p").append(`
         <div class="card">
             <img src="${img}" height=100 width=160 >
             <div class="container">

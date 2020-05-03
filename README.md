@@ -1,5 +1,5 @@
 # Random-users
-Use a random user generator API to display detailed user profiles
+Use a random user generator API to display detailed user profiles.
 Basic elements to integrate into the project: download UI-semantic here: https://semantic-ui.com/views/card.html
 or the bootstrap library (CDN). Then download the jquery library in the project. Use the API: https://randomuser.me/documentation.
 
